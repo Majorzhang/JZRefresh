@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JZRefresh" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oZR-dt-uf4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.52098756229999998" green="1" blue="0.29379991890000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kUt-t4-GBK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4vs-0F-OXP"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksg-uj-c8B">
+                                <rect key="frame" x="10" y="10" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="pdB-xR-hzV"/>
+                                    <constraint firstAttribute="height" constant="30" id="zgc-jv-nHw"/>
+                                </constraints>
+                                <state key="normal" title="beginRefresh"/>
+                                <connections>
+                                    <action selector="endAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TvG-Dg-CEb"/>
+                                    <action selector="endRefresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Op-Em-vTL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgf-QF-QYa">
+                                <rect key="frame" x="0.0" y="285" width="600" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="G7S-LS-evc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="endAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVL-bf-URh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oZR-dt-uf4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PwH-pL-Fo0"/>
+                            <constraint firstItem="oZR-dt-uf4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SMs-cz-O2w"/>
+                            <constraint firstItem="dgf-QF-QYa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="265" id="Z2Q-iR-kQ9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dgf-QF-QYa" secondAttribute="trailing" constant="-20" id="aGm-Z0-Mz6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oZR-dt-uf4" secondAttribute="bottom" id="bgV-0K-PI1"/>
+                            <constraint firstItem="oZR-dt-uf4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i0u-7m-uFJ"/>
+                            <constraint firstItem="dgf-QF-QYa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="iea-sQ-cWH"/>
+                            <constraint firstItem="ksg-uj-c8B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="kkc-tG-G1C"/>
+                            <constraint firstAttribute="trailing" secondItem="oZR-dt-uf4" secondAttribute="trailing" id="mrp-r0-ITr"/>
+                            <constraint firstItem="ksg-uj-c8B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="vUW-7G-vG0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SMs-cz-O2w"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="beginRefresh" destination="ksg-uj-c8B" id="FsE-CM-uU4"/>
+                        <outlet property="tableView" destination="oZR-dt-uf4" id="7qF-31-2hx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="280" y="254"/>
         </scene>
     </scenes>
 </document>

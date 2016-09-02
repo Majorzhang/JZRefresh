@@ -14,6 +14,11 @@
 		A78E85071D6E85F8002471E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78E85051D6E85F8002471E4 /* LaunchScreen.storyboard */; };
 		A78E85121D6E85F9002471E4 /* JZRefreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78E85111D6E85F9002471E4 /* JZRefreshTests.swift */; };
 		A78E851D1D6E85F9002471E4 /* JZRefreshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78E851C1D6E85F9002471E4 /* JZRefreshUITests.swift */; };
+		A78E852B1D6ED72E002471E4 /* JZImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78E852A1D6ED72E002471E4 /* JZImageView.swift */; };
+		A78E852D1D6FD475002471E4 /* JZRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78E852C1D6FD475002471E4 /* JZRefreshHeader.swift */; };
+		A78E85321D701A9F002471E4 /* JZRefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78E85311D701A9F002471E4 /* JZRefreshFooter.swift */; };
+		A78E85341D701ACE002471E4 /* JZScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78E85331D701ACE002471E4 /* JZScrollViewExtension.swift */; };
+		A79C37C31D701E200095C40B /* JZRefreshBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79C37C21D701E200095C40B /* JZRefreshBaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		A78E85181D6E85F9002471E4 /* JZRefreshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JZRefreshUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78E851C1D6E85F9002471E4 /* JZRefreshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JZRefreshUITests.swift; sourceTree = "<group>"; };
 		A78E851E1D6E85F9002471E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A78E852A1D6ED72E002471E4 /* JZImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JZImageView.swift; sourceTree = "<group>"; };
+		A78E852C1D6FD475002471E4 /* JZRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JZRefreshHeader.swift; sourceTree = "<group>"; };
+		A78E85311D701A9F002471E4 /* JZRefreshFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JZRefreshFooter.swift; sourceTree = "<group>"; };
+		A78E85331D701ACE002471E4 /* JZScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JZScrollViewExtension.swift; sourceTree = "<group>"; };
+		A79C37C21D701E200095C40B /* JZRefreshBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JZRefreshBaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,11 @@
 			children = (
 				A78E84FC1D6E85F8002471E4 /* AppDelegate.swift */,
 				A78E84FE1D6E85F8002471E4 /* ViewController.swift */,
+				A78E852A1D6ED72E002471E4 /* JZImageView.swift */,
+				A78E852C1D6FD475002471E4 /* JZRefreshHeader.swift */,
+				A78E85311D701A9F002471E4 /* JZRefreshFooter.swift */,
+				A79C37C21D701E200095C40B /* JZRefreshBaseView.swift */,
+				A78E85331D701ACE002471E4 /* JZScrollViewExtension.swift */,
 				A78E85001D6E85F8002471E4 /* Main.storyboard */,
 				A78E85031D6E85F8002471E4 /* Assets.xcassets */,
 				A78E85051D6E85F8002471E4 /* LaunchScreen.storyboard */,
@@ -259,7 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78E852D1D6FD475002471E4 /* JZRefreshHeader.swift in Sources */,
+				A78E85341D701ACE002471E4 /* JZScrollViewExtension.swift in Sources */,
+				A78E852B1D6ED72E002471E4 /* JZImageView.swift in Sources */,
 				A78E84FF1D6E85F8002471E4 /* ViewController.swift in Sources */,
+				A79C37C31D701E200095C40B /* JZRefreshBaseView.swift in Sources */,
+				A78E85321D701A9F002471E4 /* JZRefreshFooter.swift in Sources */,
 				A78E84FD1D6E85F8002471E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +507,7 @@
 				A78E85231D6E85F9002471E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A78E85241D6E85F9002471E4 /* Build configuration list for PBXNativeTarget "JZRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +516,7 @@
 				A78E85261D6E85F9002471E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A78E85271D6E85F9002471E4 /* Build configuration list for PBXNativeTarget "JZRefreshUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +525,7 @@
 				A78E85291D6E85F9002471E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
